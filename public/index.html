@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet"
+          href="less/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon"
+          href="images/myLogo.png">
+</head>
+<body>
+
+    <section id="app">
+        <nav>
+            <a href="index.html#/home"><h1 class="pageHeader">Abby's Ideas</h1></a>
+            <div class="menu">
+                <router-link class="routerLink" to="/home">Home</router-link>
+                <router-link class="routerLink" to="/about">About</router-link>
+                <router-link class="routerLink" to="/myWork">My Work</router-link>
+                <router-link class="routerLink" to="/contact">Contact Me</router-link>
+                </div>
+        </nav>
+    <router-view></router-view>
+    </section>
+<!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.5.2/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+<!--    <script src="/__/firebase/init.js"></script>-->
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyBQmfHnqwIHcLDBgnFoqwHd5qid_cAkAXM",
+            authDomain: "portfolio-f6bfa.firebaseapp.com",
+            databaseURL: "https://portfolio-f6bfa.firebaseio.com",
+            projectId: "portfolio-f6bfa",
+            storageBucket: "portfolio-f6bfa.appspot.com",
+            messagingSenderId: "200830823252",
+            appId: "1:200830823252:web:1a7fdd19412e68ca3cb6c1",
+            measurementId: "G-VK00GH8NQJ"
+        });
+
+        var db = firebase.firestore();
+    </script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
